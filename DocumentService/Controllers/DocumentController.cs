@@ -35,6 +35,7 @@ namespace DocumentService.Infrastructure.DTOs
         {
             if (id != documentDto.Id) throw new Exception("Bad request");
 
+            documentDto.UpdatedDate = DateTime.Now;
             var document = DocumentMapper.ToEntity(documentDto);
             await _documentRepository.UpdateAsync(document);
 
@@ -45,6 +46,8 @@ namespace DocumentService.Infrastructure.DTOs
         public async Task<ActionResult> PostDocument(DocumentDto documentDto)
         {
             documentDto.Id = Guid.NewGuid();
+            documentDto.CreatedDate = DateTime.Now;
+            documentDto.UpdatedDate = DateTime.Now;
             foreach(var filelinkDto in documentDto.FileLinkDtos)
             {
                 filelinkDto.Id = Guid.NewGuid();

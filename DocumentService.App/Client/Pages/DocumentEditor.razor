@@ -5,6 +5,10 @@
 
 <PageTitle>Editor</PageTitle>
 
+<head>
+    <link href="/Styles/DocumentEditor.css" rel="stylesheet">
+</head>
+
 <h1>DocumentEditor</h1>
 
 @if (documentDto is not null)
@@ -12,20 +16,20 @@
     <EditForm Model="@documentDto" OnSubmit="@HandleSubmit">
         <div>
             <label>
-                Title
-                <InputText @bind-Value="documentDto.Title" />
+                <h3>Title</h3>
+                <InputText @bind-Value="documentDto.Title" class="title"/>
             </label>
         </div>
         <div>
             <label>
-                Description
-                <InputTextArea @bind-Value="documentDto.Description" rows="3" column="5" />
+                <h3>Description</h3>
+                <InputTextArea @bind-Value="documentDto.Description" class="description" rows="3" column="5"/>
             </label>
         </div>
         <div>
             <label>
-                Content
-                <InputTextArea @bind-Value="documentDto.Content" rows="6" column="10" />
+                <h3>Content</h3>
+                <InputTextArea @bind-Value="documentDto.Content" class="content" rows="7" column="10" />
             </label>
         </div>
 

@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService.Domain", "D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService.Infrastructure", "DocumentService.Infrastructure\DocumentService.Infrastructure.csproj", "{9C109EEF-0FCD-4EC3-B5D2-63A718E0D552}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentService.App.Server", "DocumentService.App\Server\DocumentService.App.Server.csproj", "{3C486910-20DF-41B6-8589-DD7B218E28DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService.App.Server", "DocumentService.App\Server\DocumentService.App.Server.csproj", "{3C486910-20DF-41B6-8589-DD7B218E28DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentService.App.Client", "DocumentService.App\Client\DocumentService.App.Client.csproj", "{785A7796-3085-43A1-9C05-D4211F3DC6DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService.App.Client", "DocumentService.App\Client\DocumentService.App.Client.csproj", "{785A7796-3085-43A1-9C05-D4211F3DC6DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

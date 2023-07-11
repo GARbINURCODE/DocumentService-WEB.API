@@ -1,0 +1,54 @@
+﻿@using DocumentService.Infrastructure.DTOs;
+@inject HttpClient Http
+
+@page "/editor/{Id?}"
+
+<PageTitle>Editor</PageTitle>
+
+<h1>DocumentEditor</h1>
+
+@if (documentDto is not null)
+{
+    <EditForm Model="@documentDto" OnSubmit="@HandleSubmit">
+        <div>
+            <label>
+                Title
+                <InputText @bind-Value="documentDto.Title" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Description
+                <InputTextArea @bind-Value="documentDto.Description" rows="3" column="5" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Content
+                <InputTextArea @bind-Value="documentDto.Content" rows="6" column="10" />
+            </label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </EditForm>
+}
+
+@code {
+    private DocumentDto? documentDto;
+
+    [Parameter]
+    public string? Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id is null)
+            return;
+        documentDto = await Http.GetFromJsonAsync<DocumentDto>
+       ($"https://localhost:7013/api/Document/{Id}"); 
+    }
+
+    private async void HandleSubmit()
+    {
+        await Http.PutAsJsonAsync<DocumentDto>($"https://localhost:7013/api/Document/{Id}", documentDto);
+    }
+}

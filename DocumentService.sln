@@ -9,9 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService.Domain", "D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService.Infrastructure", "DocumentService.Infrastructure\DocumentService.Infrastructure.csproj", "{9C109EEF-0FCD-4EC3-B5D2-63A718E0D552}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService.App.Server", "DocumentService.App\Server\DocumentService.App.Server.csproj", "{3C486910-20DF-41B6-8589-DD7B218E28DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.Client", "Blazor.Client\Blazor.Client.csproj", "{664732B7-ACB1-4642-A140-D102F6B2AC36}"
+	ProjectSection(ProjectDependencies) = postProject
+		{77EE139B-8643-40E1-8D92-631502F4984B} = {77EE139B-8643-40E1-8D92-631502F4984B}
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService.App.Client", "DocumentService.App\Client\DocumentService.App.Client.csproj", "{785A7796-3085-43A1-9C05-D4211F3DC6DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.RCL", "Blazor.RCL\Blazor.RCL.csproj", "{8A7F2FA6-CF28-4D8A-B575-AE4F092D8762}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +34,14 @@ Global
 		{9C109EEF-0FCD-4EC3-B5D2-63A718E0D552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C109EEF-0FCD-4EC3-B5D2-63A718E0D552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C109EEF-0FCD-4EC3-B5D2-63A718E0D552}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C486910-20DF-41B6-8589-DD7B218E28DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C486910-20DF-41B6-8589-DD7B218E28DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C486910-20DF-41B6-8589-DD7B218E28DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C486910-20DF-41B6-8589-DD7B218E28DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{785A7796-3085-43A1-9C05-D4211F3DC6DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{785A7796-3085-43A1-9C05-D4211F3DC6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{785A7796-3085-43A1-9C05-D4211F3DC6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{785A7796-3085-43A1-9C05-D4211F3DC6DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664732B7-ACB1-4642-A140-D102F6B2AC36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664732B7-ACB1-4642-A140-D102F6B2AC36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664732B7-ACB1-4642-A140-D102F6B2AC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664732B7-ACB1-4642-A140-D102F6B2AC36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7F2FA6-CF28-4D8A-B575-AE4F092D8762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7F2FA6-CF28-4D8A-B575-AE4F092D8762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7F2FA6-CF28-4D8A-B575-AE4F092D8762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7F2FA6-CF28-4D8A-B575-AE4F092D8762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

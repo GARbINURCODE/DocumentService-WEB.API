@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using DocumentService.Domain.DTOs;
 
 namespace DocumentService.Infrastructure.DTOs
 {

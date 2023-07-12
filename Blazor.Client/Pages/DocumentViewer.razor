@@ -1,0 +1,13 @@
+﻿@using DocumentService.Domain.DTOs;
+@inject HttpClient Http
+
+@page "/viewer/{Id?}"
+
+<PageTitle>Viewer</PageTitle>
+
+<DocViewerComponent Id="@Id"></DocViewerComponent>
+
+@code{
+    [Parameter]
+    public string? Id { get; set; }
+}

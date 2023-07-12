@@ -1,0 +1,12 @@
+﻿@using DocumentService.Domain.DTOs;
+@inject HttpClient Http
+
+@page "/editor/{Id?}"
+
+<PageTitle>Editor</PageTitle>
+
+<DocEditorComponent Id="@Id"></DocEditorComponent>
+@code{
+    [Parameter]
+    public string? Id { get; set; }
+}

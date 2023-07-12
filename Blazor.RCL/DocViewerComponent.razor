@@ -1,0 +1,33 @@
+﻿@using DocumentService.Domain.DTOs;
+@inject HttpClient Http;
+
+<h1>DocumentViewer</h1>
+
+@if (documentDto is not null)
+{
+    <div>
+        <h2>@documentDto.Title</h2>
+        <p class="description">"@documentDto.Description"</p>
+        <pre class="content">@((MarkupString?)documentDto.Content)</pre>
+    </div>
+}
+
+@code {
+    private DocumentDto? documentDto;
+
+    [Parameter]
+    public string? Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id is null)
+            return;
+        documentDto = await Http.GetFromJsonAsync<DocumentDto>
+       ($"https://localhost:7013/api/Document/{Id}");
+    }
+
+    private async void HandleSubmit()
+    {
+        await Http.PutAsJsonAsync<DocumentDto>($"https://localhost:7013/api/Document/{Id}", documentDto);
+    }
+}

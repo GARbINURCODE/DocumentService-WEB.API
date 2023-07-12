@@ -1,0 +1,32 @@
+﻿h3 {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+label {
+    min-width: 50%;
+    margin-top: 10px;
+}
+
+::deep textarea {
+    width: 100%;
+    padding: 0px;
+    resize: none;
+    border-radius: 5px;
+    border-color: black;
+    white-space: pre-wrap;
+}
+
+::deep .title {
+    width: 100%;
+    border-radius: 5px;
+    border-color: black;
+}
+
+button {
+    width: 50%;
+    margin-top: 10px;
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: darkslateblue;
+}
